@@ -2,10 +2,10 @@ version: '3'
 
 services:  
   jenkins:
-    #build:
-    #    context: .
+    build:
+        context: .
     container_name: jenkins
-    image: guysoft/jenkins-sudo:lts
+    #image: guysoft/jenkins-sudo:lts
     restart: always
     volumes:
       - jenkins_home:/var/jenkins_home
