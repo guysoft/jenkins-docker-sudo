@@ -11,7 +11,7 @@ RUN apt-get update \
                             && rm -rf /var/lib/apt/lists/*
                             
 RUN curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg > /tmp/dkey; apt-key add /tmp/dkey && \
-RUN add-apt-repository \
+add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
    $(lsb_release -cs) \
    stable"
